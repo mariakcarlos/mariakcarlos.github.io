@@ -142,11 +142,13 @@ h1 {
 
 /* Final Project Section */
 .underConstruction {
+    display: flex;
     margin: auto;
     padding: 150px 0px;
+    justify-content: center;
 }
 .underConstruction h1 {
-    font-size: 140px;
+    font-size: 150px;
     text-align: center;
 }
 
@@ -176,4 +178,25 @@ footer {
     padding-top: 30px;
     text-align: center;
     color: white;
+}
+
+/* Back to Top Button*/
+.scrolltotop {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 5%;
+    background-color: rgb(0, 38, 255);
+    color: #e8e8e8;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    z-index: 1000;
+}
+.scrolltotop:hover {
+    background-color: rgb(0, 173, 183);
+    color: white;
+    font-size: 20px;
+    padding: 20px;
 }
