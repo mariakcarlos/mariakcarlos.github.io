@@ -1,0 +1,104 @@
+@font-face {
+    font-family: "YesevaOne";
+    src: url("Fonts/Yeseva_One/YesevaOne-Regular.ttf");
+}
+/* general styling */
+body {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+        "header header"
+        "sidebar content1"
+        "sidebar content2_3"
+        "footer footer";
+    gap: 20px;
+    padding: 20px;
+    margin: 0;
+    background-color: rgb(235, 240, 255);
+    font-family: "YesevaOne";
+    color: rgb(255, 255, 255);
+}
+header {
+    padding: 10px;
+    grid-area: header;
+    background-color: rgb(177, 190, 255);
+    transform: rotate(-1deg) scale(1.02);
+    text-shadow: 0 0 5px rgba(255, 191, 229, 0.8);
+}
+aside {
+    grid-area: sidebar;
+    background-color: rgb(155, 167, 212);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+aside h2 {
+    text-decoration: underline;
+}
+footer {
+    grid-area: footer;
+    background-color: rgb(177, 190, 255);
+}
+
+
+/* shared styling */
+header, footer, .content1, .content2, .content3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+
+/* content boxes */
+.content1 {
+    grid-area: content1;
+    background-color: rgb(109, 109, 255);
+    padding: 15px;
+}
+.content2_3 {
+    grid-area: content2_3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+.content2_3 img {
+    display: block;
+    width: 100%;
+    border-radius: 100px;
+
+    animation-duration: 5s;
+    animation-name: spin;
+    filter: contrast(120%);
+}
+.content2 {
+    background-color: rgb(151, 151, 255);
+    transform: skew(-1deg);
+}
+.content3 {
+    background-color: rgb(151, 151, 255);
+    transform: skew(1deg);
+}
+
+
+/* animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg) scale(1);
+        border-radius: 100px;
+        filter: grayscale(60%) blur(2px);
+    }
+    50% {
+        transform: rotate(180deg) scale(0.5);
+        border-radius: 0;
+        filter: grayscale(100%) blur(5px);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+        border-radius: 30%;
+        filter: grayscale(0%) blur(0);
+    }
+}

@@ -1,0 +1,211 @@
+/* general styling*/
+* {
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "YesevaOne";
+    src: url("Fonts/Yeseva_One/YesevaOne-Regular.ttf");}
+
+
+/* style for main content*/
+body {
+    margin: 0px;
+    background-color: #7d7d7d;
+}
+body, p {
+    margin: 0px;
+    color: white;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    width: 100%;
+    padding: 15px
+}
+footer {
+    background-color: #4d4c4c;
+    padding: 60px;
+}
+h1 {
+    text-transform: uppercase;
+    font-size: 40px;
+    padding-left: 50px;
+}
+h1, h2 {
+    text-align: left;
+    font-family: "YesevaOne";
+    color: white
+}
+
+
+/* home page*/
+.homeheader{
+    text-align: center;
+    padding: 20px;
+}
+img{
+    border-left: 8px solid #5e5e5e;
+    border-bottom: 8px solid #5e5e5e;
+    border-top: 8px solid white;
+    border-right: 8px solid white;
+}
+.column1{
+    float:left;
+    width: 33.33%;
+    padding: 50px;
+    margin: auto;
+}
+.column {
+    float:left;
+    width: 33.33%;
+    padding: 10px;
+    margin: auto;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/* navigation bar*/
+.navbar a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 70px;
+    padding: 15px;
+    display: block;
+    text-align: right;
+}
+.navbar a:hover {
+    background-color: #949494
+}
+.navbar ul {
+    list-style: none;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+.navbar li {
+    float: left
+}
+
+
+/* scroll to top button*/
+.scrolltotop {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 5%;
+    background-color: #1b5490;
+    color: #e8e8e8;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 20px;
+}
+.scrolltotop:hover {
+    background-color: #2d6418;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+}
+
+
+/* product page image containers*/
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+.box {
+    width: 343px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    transition: 1s;
+}
+.box img {
+    width: 100%;
+    height: 75%;
+    border: none;
+}
+.boxContent {
+    padding: 16px;
+}
+.boxContent h3{
+    color:#333;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+.boxContent ul{
+    color: #666;
+    font-size: 19px;
+    margin: auto;
+}
+.box:hover {
+    transform: scale(1.2);
+    z-index: 2;
+}
+
+
+/* about us page*/
+.aboutUs {
+    width: 100%;
+    min-height: 100vh;
+}
+.aboutContainer {
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 100px;
+}
+.contentSection {
+    float: left;
+    width: 55%;
+    margin-top: 70px;
+}
+.imageSection {
+    float: right;
+    width: 40%;
+}
+.imageSection img {
+    width: 80%;
+    border: none;
+}
+.contentSection .aboutTitle {
+    text-transform: uppercase;
+    font-size: 28px;
+}
+.contentSection .aboutTitle h2 {
+    color: #ececec;
+}
+.contentSection .aboutContent h3 {
+    margin-top: 20px;
+    color: #dddddd;
+    font-size: 25px;
+}
+.contentSection .aboutContent p {
+    color: #e6e6e6;
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+.contentSection .social {
+    margin-top: 40px;
+}
+.contentSection .social i {
+    color: #2153dc;
+    font-size: 30px;
+    padding: 0px 10px;
+}
+.contentSection .social i:hover {
+    color: #3d3d3d;
+}

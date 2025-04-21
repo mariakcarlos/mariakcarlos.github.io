@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>LAB 2</title>
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+
+    <body>
+        <script src="script.js"></script>
+        
+        <header>
+            <h1 id="greeting">Hello User!</h1>
+        </header>
+
+            <p id="paraMessage">
+                Welcome to this interactive website! You may customize
+                this web page as you wish, including this paragraph, by inputting data
+                into the following below:
+            </p>
+            <br/>
+            <br/>
+
+            <!-- Changes User Greeting Name -->
+            <label for="userName">Enter a Name:</label><br/>
+            <input type="text" id="userName"><br/><br/>
+
+
+            <!-- Changes Paragraph Message -->
+            <label for="message">Enter a message you'd like to display above:</label><br/>
+            <input type="text" id="message"><br/><br/>
+
+
+            <!-- Changes Background Color -->
+            <label>Choose a color to change the background:</label><br/>
+            <select id="colorSelect">
+                <option id="color1" value="darkred">Dark Red</option>
+                <option id="color2" value="cornflowerblue">Cornflower Blue</option>
+                <option id="color3" value="darkgreen">Dark Green</option>
+                <option id="color4" value="indianred">Indian Red</option>
+                <option id="color5" value="lightpink">Light Pink</option>
+                <option id="color6" value="lightseagreen">Light Sea Green</option>
+                <option id="color7" value="palevioletred">Pale Violet Red</option>
+            </select>
+            <br/>
+
+            
+            <!-- Submits all changes -->
+            <input type="button" value="Submit" onclick="applyChanges()">
+            <br/>
+            <br/>
+            <br/>
+
+            <label for="toDoInput">Enter items to add to To-Do list:</label><br/>
+            <input type="text" id="toDoInput"><br/>
+            <input type="button" value="Add to List" onclick="addToDo()">
+            <ol id="toDoList"></ol>
+
+            <footer></footer>
+    </body>
+</html>
