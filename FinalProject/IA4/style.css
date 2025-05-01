@@ -1,0 +1,377 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background-color: rgb(190, 188, 176);
+    padding-bottom: 60px;
+}
+.main {
+    margin: 20px 150px;
+    background-color:  rgba(255, 249, 209, 0.4);
+    border-radius: 10px;
+}
+
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: rgb(47, 46, 44);
+}
+.branding {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.branding img {
+    width: 100px;
+    height: auto;
+}
+#siteTitle {
+    color: rgba(255, 208, 0, 0.907);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+
+/* Home */
+.introMsg p {
+    text-align: center;
+}
+.spacer {
+    height: 2rem;
+}
+
+
+/* Initial Navigation Bar */
+.mainNav {
+    margin-top: 20px;
+    justify-content: right;
+    font-size: 25px;
+}
+.secondaryNav {
+    padding: 15px;
+    text-align: center;
+    font-size: 20px;
+    background-color: #828282;
+}
+.mainNav a, .secondaryNav a {
+    display: block;
+    padding: 15px;
+    color: rgba(255, 208, 0, 0.907);
+}
+.mainNav a:hover, .secondaryNav a:hover {
+    background-color: #545454
+}
+.mainNav ul, .secondaryNav ul {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+.mainNav li, .secondaryNav li {
+    float: left
+}
+
+
+/* Lists */
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+
+
+/* Series Info Section */
+.seriesInfoContainer {
+    display: flex;
+    padding: 5px 50px;
+    justify-content: center;
+    color: rgb(32, 32, 32);
+}
+.seriesInfoContent, .introMsg {
+    margin: 15px auto;
+    padding: 40px 60px;
+}
+.seriesHeader, .introMsg {
+    margin-bottom: 150px;
+    font-size: 20px;
+    line-height: 1.6;
+}
+.seriesHeader h2, .introMsg h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.infoRow {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 200px;
+    gap: 40px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+.infoRow.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.infoRow img {
+    width: 300px;
+    height: auto;
+    filter: contrast(120%);
+}
+.imageLeft {
+    flex-direction: row;
+}
+.imageRight {
+    flex-direction: row-reverse;
+}
+figcaption {
+    text-align: center;
+    font-size: 15px;
+}
+.charaInfo {
+    flex: 1;
+    padding-left: 30px;
+    line-height: 1.6;
+    margin-top: 70px;
+    font-size: 18px;
+}
+
+
+/* Contact Form */
+#message {
+    position: relative;
+}
+
+
+/* Table */
+.seriesInfoTable {
+    display: flex;
+    border-collapse: collapse;
+    justify-content: center;
+    font-size: 15pt;
+    margin-bottom: 150px;
+}
+.seriesInfoTable th{
+    background-color: rgb(50, 50, 50, 0.5);
+    padding: 20px;
+    padding-right: 60px;
+    text-transform: uppercase;
+    text-align: left;
+}
+.seriesInfoTable td {
+    padding: 20px;
+    border-bottom: 1px solid #dddddd;
+}
+.seriesInfoTable tr:nth-of-type(odd) {
+    background-color: #d7d7d7;
+}
+
+
+/* Footer */
+.siteFooter {
+    position: fixed;
+    text-align: center;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    color: rgba(255, 208, 0, 0.907);
+    padding: 30px 0px;
+    z-index: 1000;
+    background-color: rgb(47, 46, 44);
+}
+
+
+/* Back to Top Button*/
+.scrolltotop {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 5%;
+    background-color: rgb(255, 225, 0);
+    color: #303030;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    z-index: 1000;
+}
+.scrolltotop:hover {
+    background-color: rgb(183, 165, 0);
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+}
+
+
+/* Responsive Design */
+/* Small Screens */
+@media (max-width: 576px) {
+    /* Site Header */
+    header {
+        display: flex;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .branding {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Navigation */
+    .mainNav, .secondaryNav {
+        display: flex;
+        justify-content: space-around;
+    }
+    .mainNav ul, .secondaryNav ul {
+        flex-direction: row;
+        margin: 0px;
+        padding: 0px;
+    }
+    .mainNav li, .secondaryNav li {
+        margin: 0.5rem 0;
+        align-items: center;
+        text-align: center;
+        float: none;
+    }
+
+    .main {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+    }
+
+    /* Series Content */
+    .infoRow {
+        flex-direction: column;
+    }
+    .infoRow figure {
+        order: -1;
+        width: 100%;
+        max-width: 100%;
+    }
+    .infoRow figure img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .seriesInfoContainer, .seriesHeader {
+        padding: 10px;
+        width: 100%;
+    }
+
+    /* Series Table */
+    .seriesInfoTable {
+        width: 100%;
+        margin: 0 0 2rem 0;
+        padding: 0px;
+        border-collapse: collapse;
+    }
+    
+    .seriesInfoTable th, .seriesInfoTable td {
+        padding: 0.5rem;
+        text-align: center;
+        word-break: break-word;
+    }
+}
+
+/* Medium Screens */
+@media (min-width: 577px) and (max-width: 768px) {
+    /* Site Header */
+    header {
+        display: flex;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .branding {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Navigation */
+    .mainNav, .secondaryNav {
+        display: flex;
+        justify-content: space-around;
+    }
+    .mainNav ul, .secondaryNav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .mainNav li, .secondaryNav li {
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+    .mainNav a, .secondaryNav a {
+        display: block;
+        padding: 0.5rem;
+    }
+
+    /* Main Section */
+    .main {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* Series Content */
+    .infoRow {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        text-align: center;
+    }
+    .infoRow figure {
+        order: -1;
+        width: 100%;
+        max-width: 100%;
+    }
+    .infoRow figure img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .seriesInfoContainer, .seriesHeader {
+        padding: 10px;
+        width: 100%;
+    }
+
+    /* Series Table */
+    .seriesInfoTable {
+        width: 100%;
+        margin: 0 0 2rem 0;
+        padding: 0;
+        border-collapse: collapse;
+        text-align: center;
+    }
+    .seriesInfoTable th, .seriesInfoTable td {
+        padding: 0.75rem;
+        word-break: break-word;
+    }
+}
